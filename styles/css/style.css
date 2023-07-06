@@ -1,7 +1,14 @@
 html {
   background-image: linear-gradient(45deg, hsl(240, 100%, 27%) 0%, hsl(240, 100%, 24%) 3%, hsl(239, 100%, 22%) 9%, hsl(239, 100%, 19%) 17%, hsl(240, 100%, 17%) 30%, hsl(238, 100%, 15%) 46%, hsl(238, 100%, 13%) 65%, hsl(239, 100%, 12%) 84%, hsl(240, 100%, 10%) 100%);
-  height: 100vh;
   margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 }
 
 .header input {
@@ -10,6 +17,7 @@ html {
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 20px 20px;
+  background-color: none;
 }
 
 /*# sourceMappingURL=style.css.map */

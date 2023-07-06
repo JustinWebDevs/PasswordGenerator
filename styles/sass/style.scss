@@ -13,8 +13,15 @@ $bgGradient: linear-gradient(
 
   html{
     background-image: $bgGradient;
-    height: 100vh;
     margin: 0;
+  }
+
+  .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
   }
 
   .header{
@@ -25,5 +32,6 @@ $bgGradient: linear-gradient(
           background-repeat: no-repeat;
           background-position: right center;
           background-size: 20px 20px;
+          background-color: none;
         }
     }
