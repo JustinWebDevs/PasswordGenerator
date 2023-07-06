@@ -1,23 +1,96 @@
-html {
-  background-image: linear-gradient(45deg, hsl(240, 100%, 27%) 0%, hsl(240, 100%, 24%) 3%, hsl(239, 100%, 22%) 9%, hsl(239, 100%, 19%) 17%, hsl(240, 100%, 17%) 30%, hsl(238, 100%, 15%) 46%, hsl(238, 100%, 13%) 65%, hsl(239, 100%, 12%) 84%, hsl(240, 100%, 10%) 100%);
+* {
   margin: 0;
 }
 
-.container {
+html {
+  background-image: linear-gradient(45deg, hsl(240, 100%, 27%) 0%, hsl(240, 100%, 24%) 3%, hsl(239, 100%, 22%) 9%, hsl(239, 100%, 19%) 17%, hsl(240, 100%, 17%) 30%, hsl(238, 100%, 15%) 46%, hsl(238, 100%, 13%) 65%, hsl(239, 100%, 12%) 84%, hsl(240, 100%, 10%) 100%);
+  margin: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  font-size: 18px;
+  overflow: hidden;
 }
 
+@media (min-width: 375px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 425px) {
+  html {
+    font-size: 22px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 26px;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  html {
+    font-size: 36px;
+  }
+}
+@media (min-width: 2560px) {
+  html {
+    font-size: 52px;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  color: gray;
+  background-color: darkgray;
+  padding: 0.6rem;
+}
+
+.header {
+  color: gray;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.header h4 {
+  margin-bottom: 1rem;
+}
 .header input {
-  padding-right: 30px;
+  font-size: 1.1rem;
   background-image: url("../../copy.svg");
   background-repeat: no-repeat;
   background-position: right center;
-  background-size: 20px 20px;
-  background-color: none;
+  background-size: 1.2rem;
+  background-color: darkgray;
+  border: none;
+  color: gray;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+.containerBody .charactInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.generalText {
+  font-size: 0.8rem;
+}
+
+.textLg {
+  font-size: 1.2rem;
+}
+
+.widthDiv {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

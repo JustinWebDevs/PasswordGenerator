@@ -1,3 +1,5 @@
+*{margin: 0;}
+
 $bgGradient: linear-gradient(
     45deg,
     hsl(240deg 100% 27%) 0%,
@@ -11,27 +13,112 @@ $bgGradient: linear-gradient(
     hsl(240deg 100% 10%) 100%
   );
 
+  $font: 1;
+  $colorFont: gray; 
+  $bgColor: darkgray;
+
   html{
     background-image: $bgGradient;
     margin: 0;
-  }
-
-  .container{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+    font-size: 18px;
+    overflow: hidden;
+  }
+
+  @media (min-width: 375px){
+    html{
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: 425px){
+    html{
+      font-size: 22px;
+    }
+  }
+
+  @media (min-width: 768px){
+    html{
+      font-size: 26px;
+    }
+  }
+
+  @media (min-width: 1024px){
+    html{
+      font-size: 30px;
+    }
+  }
+
+  @media (min-width: 1440px){
+    html{
+      font-size: 36px;
+    }
+  }
+
+  @media (min-width: 2560px){
+    html{
+      font-size: 52px;
+    }
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+
+    color: $colorFont;
+    background-color: $bgColor;
+    padding: .6rem;
   }
 
   .header{
+      color: $colorFont;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      h4 {
+        margin-bottom: 1rem;
+      }
 
       input {
-          padding-right: 30px;
+          font-size: 1.1rem;
           background-image: url('../../copy.svg');
           background-repeat: no-repeat;
           background-position: right center;
-          background-size: 20px 20px;
-          background-color: none;
+          background-size: 1.2rem;
+          background-color: $bgColor;
+          border: none;
+          color: $colorFont;
+          margin-bottom: 1rem;
+          padding: 0.5rem;
         }
+
     }
+
+    .containerBody{
+
+      
+      .charactInfo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+    }
+
+  .generalText{
+    font-size: 0.8rem;
+  }
+
+  .textLg{
+    font-size: 1.2rem;
+  }
+
+  .widthDiv{
+    width: 100%;
+  }

@@ -7,27 +7,37 @@
     <link rel="stylesheet" href="styles/css/style.css">
 </head>
 <body>
+    <div class="header">
+        <h4>Password Generator</h4>
+        <input type="text" placeholder="Password" id="password" disabled>
+    </div>
     <div class="container">
-        <div class="header">
-            <h1>Password Generator</h1>
-            <input type="text" placeholder="Password" disabled>
-        </div>
-        <div class="body">
-            <h2>Character Lenght</h2>
-            <h2>0</h2>
-            <input type="range">
-            <div>
-                <input type="checkbox"><label>Test 1</label>
-                <input type="checkbox"><label>Test 2</label>
-                <input type="checkbox"><label>Test 3</label>
-                <input type="checkbox"><label>Test 4</label>
+        <div class="containerBody">
+            <div class="charactInfo">
+                <p class="generalText">Character Lenght</p>
+                <p class="textLg" id="valueRange">0</p>
             </div>
+            <input type="range" value="0" class="widthDiv" id="charLenght" min="0" max="100">
             <div>
-                <h2>STRENGTH</h2>
-
+                <div class="checkboxItem">
+                    <input type="checkbox" id="upper"><label for="upper" class="generalText">Include Uppercase Letters</label>
+                </div>
+                <div class="checkboxItem">
+                    <input type="checkbox" id="lower"><label for="lower" class="generalText">Include Lowercase Letters</label>
+                </div>
+                <div class="checkboxItem">
+                    <input type="checkbox" id="numbers"><label for="numbers" class="generalText">Include Numbers</label>
+                </div>
+                <div class="checkboxItem">
+                    <input type="checkbox" id="symbols"><label for="symbols" class="generalText">Include Symbols</label>
+                </div>
             </div>
-            <button>GENERATE -></button>
+            <div class="widthDiv">
+                <h2 class="generalText">STRENGTH</h2>
+            </div>
+            <button class="generalText widthDiv" id="generate">GENERATE -></button>
         </div>
     </div>
 </body>
 </html>
+<script src="scripts/script.js"></script>
