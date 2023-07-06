@@ -1,0 +1,29 @@
+$bgGradient: linear-gradient(
+    45deg,
+    hsl(240deg 100% 27%) 0%,
+    hsl(240deg 100% 24%) 3%,
+    hsl(239deg 100% 22%) 9%,
+    hsl(239deg 100% 19%) 17%,
+    hsl(240deg 100% 17%) 30%,
+    hsl(238deg 100% 15%) 46%,
+    hsl(238deg 100% 13%) 65%,
+    hsl(239deg 100% 12%) 84%,
+    hsl(240deg 100% 10%) 100%
+  );
+
+  html{
+    background-image: $bgGradient;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .header{
+
+      input {
+          padding-right: 30px;
+          background-image: url('../../copy.svg');
+          background-repeat: no-repeat;
+          background-position: right center;
+          background-size: 20px 20px;
+        }
+    }
