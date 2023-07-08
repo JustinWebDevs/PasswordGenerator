@@ -3,7 +3,7 @@
 }
 
 html {
-  background-image: linear-gradient(45deg, hsl(240, 100%, 27%) 0%, hsl(240, 100%, 24%) 3%, hsl(239, 100%, 22%) 9%, hsl(239, 100%, 19%) 17%, hsl(240, 100%, 17%) 30%, hsl(238, 100%, 15%) 46%, hsl(238, 100%, 13%) 65%, hsl(239, 100%, 12%) 84%, hsl(240, 100%, 10%) 100%);
+  background-color: #0F0E14;
   margin: 0;
   display: flex;
   align-items: center;
@@ -47,13 +47,13 @@ html {
 .container {
   display: flex;
   flex-direction: column;
-  color: gray;
-  background-color: darkgray;
+  color: #DFDEE1;
+  background-color: #24232B;
   padding: 0.6rem;
 }
 
 .header {
-  color: gray;
+  color: #DFDEE1;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -67,9 +67,9 @@ html {
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 1.2rem;
-  background-color: darkgray;
+  background-color: #24232B;
   border: none;
-  color: gray;
+  color: #DFDEE1;
   margin-bottom: 1rem;
   padding: 0.5rem;
 }
@@ -91,6 +91,32 @@ html {
 
 .widthDiv {
   width: 100%;
+}
+
+.inactiveFontColor {
+  color: #56555D;
+}
+
+.checkboxItem label {
+  margin-left: 0.2rem;
+}
+
+.containerBody div {
+  margin-bottom: 0.2rem;
+}
+
+.strengthDiv {
+  background-color: #18181F;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.strengthDiv .item {
+  height: 0.5rem;
+  width: 0.2rem;
+  border: 0.05rem #fff solid;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=style.css.map */

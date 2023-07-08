@@ -1,24 +1,25 @@
 *{margin: 0;}
 
-$bgGradient: linear-gradient(
-    45deg,
-    hsl(240deg 100% 27%) 0%,
-    hsl(240deg 100% 24%) 3%,
-    hsl(239deg 100% 22%) 9%,
-    hsl(239deg 100% 19%) 17%,
-    hsl(240deg 100% 17%) 30%,
-    hsl(238deg 100% 15%) 46%,
-    hsl(238deg 100% 13%) 65%,
-    hsl(239deg 100% 12%) 84%,
-    hsl(240deg 100% 10%) 100%
-  );
+// $bgGradient: linear-gradient(
+//     45deg,
+//     hsl(240deg 100% 27%) 0%,
+//     hsl(240deg 100% 24%) 3%,
+//     hsl(239deg 100% 22%) 9%,
+//     hsl(239deg 100% 19%) 17%,
+//     hsl(240deg 100% 17%) 30%,
+//     hsl(238deg 100% 15%) 46%,
+//     hsl(238deg 100% 13%) 65%,
+//     hsl(239deg 100% 12%) 84%,
+//     hsl(240deg 100% 10%) 100%
+//   );
 
   $font: 1;
-  $colorFont: gray; 
-  $bgColor: darkgray;
+  $colorFont: #DFDEE1; 
+  $bgColor: #24232B;
 
   html{
-    background-image: $bgGradient;
+    // background-image: $bgGradient;
+    background-color: #0F0E14;
     margin: 0;
     display: flex;
     align-items: center;
@@ -121,4 +122,35 @@ $bgGradient: linear-gradient(
 
   .widthDiv{
     width: 100%;
+  }
+
+  .inactiveFontColor{
+    color: #56555D;
+  }
+
+  .checkboxItem{
+    label{
+      margin-left: 0.2rem;
+    }
+  }
+
+  .containerBody{
+    div{
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  .strengthDiv{
+    background-color: #18181F;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    
+    .item{
+      height: 0.5rem;
+      width: 0.2rem;
+      border: 0.05rem #fff solid;
+      display: inline-block;
+    }
   }

@@ -60,10 +60,11 @@ const generatePassword = () => {
 
 const changeMainText = () => {
 
-    let passText = "Password";
+    let passText = "password";
     passText = passText.split('');
 
     if (upper.checked) {
+        passText[0] = 'P';
         passText[1] = 'A';
         passText[2] = 'S';
         passText[3] = 'S';

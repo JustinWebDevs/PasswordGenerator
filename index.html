@@ -17,7 +17,9 @@
                 <p class="generalText">Character Lenght</p>
                 <p class="textLg" id="valueRange">0</p>
             </div>
-            <input type="range" value="0" class="widthDiv" id="charLenght" min="0" max="100">
+            <div>
+                <input type="range" value="0" class="widthDiv inactiveFontColor" id="charLenght" min="0" max="100">
+            </div>
             <div>
                 <div class="checkboxItem">
                     <input type="checkbox" id="upper"><label for="upper" class="generalText">Include Uppercase Letters</label>
@@ -32,8 +34,14 @@
                     <input type="checkbox" id="symbols"><label for="symbols" class="generalText">Include Symbols</label>
                 </div>
             </div>
-            <div class="widthDiv">
-                <h2 class="generalText">STRENGTH</h2>
+            <div class="widthDiv strengthDiv">
+                <h3 class="generalText inactiveFontColor">STRENGTH</h3>
+                <div class="items">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
             </div>
             <button class="generalText widthDiv" id="generate">GENERATE -></button>
         </div>
