@@ -83,10 +83,15 @@ html {
 
 .generalText {
   font-size: 0.8rem;
+  display: inline-block;
 }
 
 .textLg {
   font-size: 1.2rem;
+}
+
+.textSm {
+  font-size: 0.7rem;
 }
 
 .widthDiv {
@@ -111,12 +116,36 @@ html {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  align-items: baseline;
+}
+.strengthDiv .items {
+  display: flex;
 }
 .strengthDiv .item {
-  height: 0.5rem;
-  width: 0.2rem;
+  height: 0.7rem;
+  width: 0.3rem;
   border: 0.05rem #fff solid;
   display: inline-block;
+  box-sizing: border-box;
+  margin-left: 0.2rem;
+  margin-bottom: 0;
+}
+
+.veryEasy {
+  background-color: red;
+}
+
+.easy {
+  background-color: rgb(255, 77, 0);
+}
+
+.medium {
+  background-color: yellow;
+}
+
+.hard {
+  background-color: green;
 }
 
 /*# sourceMappingURL=style.css.map */

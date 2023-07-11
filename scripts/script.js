@@ -95,10 +95,31 @@ const changeMainText = () => {
 
 }
 
+const valueStrength = (charQty) => {
+    let plusValue = 0;
+
+    upper.checked ? plusValue++ : null;
+    lower.checked ? plusValue++ : null;
+    numbers.checked ? plusValue++ : null;
+    symbols.checked ? plusValue++ : null;
+
+    let dificult1 = document.getElementById('dificult1');
+    let dificult2 = document.getElementById('dificult2');
+    let dificult3 = document.getElementById('dificult3');
+    let dificult4 = document.getElementById('dificult4');
+
+    let strength = (charQty * plusValue);
+
+    if (strength < 20) {
+        
+    }
+
+
 upper.addEventListener('click', changeMainText);
 lower.addEventListener('click', changeMainText);
 numbers.addEventListener('click', changeMainText);
 symbols.addEventListener('click', changeMainText);
+
 generate.addEventListener('click', ()=>{
     if (upper.checked || lower.checked || numbers.checked || symbols.checked){
         generatePassword();
@@ -109,4 +130,6 @@ generate.addEventListener('click', ()=>{
 
 charLenght.addEventListener('input', () => {
     valueRange.innerText = charLenght.value;
+    valueStrength(charLenght.value);
 });
+
