@@ -93,20 +93,24 @@ const changeMainText = () => {
 
     password.setAttribute('placeholder', passText);
 
+    strengRange()
 }
 
 const valueStrength = (charQty) => {
-    let plusValue = 0;
+    let plusValue = 1;
 
     upper.checked ? plusValue++ : null;
     lower.checked ? plusValue++ : null;
     numbers.checked ? plusValue++ : null;
     symbols.checked ? plusValue++ : null;
 
+    plusValue > 1 ? plusValue-- : null;
+
     let dificult1 = document.getElementById('dificult1');
     let dificult2 = document.getElementById('dificult2');
     let dificult3 = document.getElementById('dificult3');
     let dificult4 = document.getElementById('dificult4');
+    let strDificult = document.getElementById('strDificult');
 
     let strength = (charQty * plusValue);
     console.log(strength)
@@ -115,21 +119,25 @@ const valueStrength = (charQty) => {
         dificult2.className = 'item';
         dificult3.className = 'item';
         dificult4.className = 'item';
+        strDificult.innerHTML = 'VERY EASY';
     }else if(strength < 30){
         dificult1.className = 'easy item';
         dificult2.className = 'easy item';
         dificult3.className = 'item';
         dificult4.className = 'item';
+        strDificult.innerHTML = 'EASY'
     }else if(strength < 40){
         dificult1.className = 'medium item';
         dificult2.className = 'medium item';
         dificult3.className = 'medium item';
         dificult4.className = 'item';
-    }else if (strength < 50){
+        strDificult.innerHTML = 'MEDIUM'
+    }else if (strength >= 40){
         dificult1.className = 'hard item';
         dificult2.className = 'hard item';
         dificult3.className = 'hard item';
         dificult4.className = 'hard item';
+        strDificult.innerHTML = 'HARD'
     }
 }
 
@@ -146,7 +154,9 @@ generate.addEventListener('click', ()=>{
     }
 });
 
-charLenght.addEventListener('input', () => {
+charLenght.addEventListener('input', strengRange);
+
+function strengRange(){
     valueRange.innerText = charLenght.value;
     valueStrength(charLenght.value);
-});
+}
