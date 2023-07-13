@@ -109,9 +109,27 @@ const valueStrength = (charQty) => {
     let dificult4 = document.getElementById('dificult4');
 
     let strength = (charQty * plusValue);
-
+    console.log(strength)
     if (strength < 20) {
-        
+        dificult1.className = 'veryEasy item';
+        dificult2.className = 'item';
+        dificult3.className = 'item';
+        dificult4.className = 'item';
+    }else if(strength < 30){
+        dificult1.className = 'easy item';
+        dificult2.className = 'easy item';
+        dificult3.className = 'item';
+        dificult4.className = 'item';
+    }else if(strength < 40){
+        dificult1.className = 'medium item';
+        dificult2.className = 'medium item';
+        dificult3.className = 'medium item';
+        dificult4.className = 'item';
+    }else if (strength < 50){
+        dificult1.className = 'hard item';
+        dificult2.className = 'hard item';
+        dificult3.className = 'hard item';
+        dificult4.className = 'hard item';
     }
 }
 
