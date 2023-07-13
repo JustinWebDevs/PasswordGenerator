@@ -6,6 +6,7 @@ let password = document.getElementById('password');
 let charLenght = document.getElementById('charLenght'); 
 let generate = document.getElementById('generate');
 let valueRange = document.getElementById('valueRange');
+let copy = document.getElementById('copy');
 
 const generatePassword = () => {
     let upperCharaters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -113,7 +114,7 @@ const valueStrength = (charQty) => {
     let strDificult = document.getElementById('strDificult');
 
     let strength = (charQty * plusValue);
-    console.log(strength)
+
     if (strength < 20) {
         dificult1.className = 'veryEasy item';
         dificult2.className = 'item';
@@ -160,3 +161,11 @@ function strengRange(){
     valueRange.innerText = charLenght.value;
     valueStrength(charLenght.value);
 }
+
+copy.addEventListener('click', ()=>{
+    navigator.clipboard.writeText(password.value).then(function() {
+        alert("Copied to clipboard successfully!");
+      }, function() {
+        alert("Unable to write to clipboard. :-(");
+      });
+});

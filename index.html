@@ -9,7 +9,10 @@
 <body>
     <div class="header">
         <h4>Password Generator</h4>
-        <input type="text" placeholder="Password" id="password" disabled>
+        <div class="inputContainer">
+            <input type="text" placeholder="Password" id="password" disabled>
+            <img src="copy.svg" id="copy" alt="Copy">
+        </div>
     </div>
     <div class="container">
         <div class="containerBody">
@@ -44,7 +47,7 @@
                     <div id="dificult4" class="item"></div>
                 </div>
             </div>
-            <button class="generalText widthDiv" id="generate">GENERATE -></button>
+            <button class="generalText widthDiv btnLg" id="generate">GENERATE <img class="arrow" src="right-arrow.svg" alt="→"></button>
         </div>
     </div>
 </body>

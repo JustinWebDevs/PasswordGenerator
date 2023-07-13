@@ -16,6 +16,7 @@
   $font: 1;
   $colorFont: #DFDEE1; 
   $bgColor: #24232B;
+  $greenColor: #A4FFAF;
 
   html{
     // background-image: $bgGradient;
@@ -85,18 +86,32 @@
         margin-bottom: 1rem;
       }
 
+      .inputContainer{
+
+        background-color: $bgColor;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+
       input {
           font-size: 1.1rem;
-          background-image: url('../../copy.svg');
-          background-repeat: no-repeat;
-          background-position: right center;
-          background-size: 1.2rem;
-          background-color: $bgColor;
+          // background-image: url('../../copy.svg');
+          // background-repeat: no-repeat;
+          // background-position: right center;
+          // background-size: 1.2rem;
           border: none;
+          background-color: $bgColor;
           color: $colorFont;
-          margin-bottom: 1rem;
-          padding: 0.5rem;
         }
+
+        img{
+          width: 1.2rem;
+
+          &:hover{
+            cursor: pointer;
+          }
+        }
+
+      }
 
     }
 
@@ -108,6 +123,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: baseline;
+
+        .textLg{
+          color: $greenColor;
+        }
       }
 
     }
@@ -146,6 +165,7 @@
   }
 
   .strengthDiv{
+    margin-top: 0.4rem ;
     background-color: #18181F;
     padding: 0.5rem;
     box-sizing: border-box;
@@ -184,4 +204,21 @@
 
   .hard{
     background-color: green;
+  }
+
+  .btnLg{
+    margin-top: 0.5rem;
+    background-color: $greenColor;
+    padding: 0.5rem;
+    font-size: 0.6rem;
+    border: none;
+    box-sizing: border-box;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    .arrow{
+      max-width: 0.5rem;
+      margin-left: 0.2rem;
+    }
   }

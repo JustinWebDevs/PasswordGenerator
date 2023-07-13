@@ -61,17 +61,22 @@ html {
 .header h4 {
   margin-bottom: 1rem;
 }
-.header input {
-  font-size: 1.1rem;
-  background-image: url("../../copy.svg");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 1.2rem;
+.header .inputContainer {
   background-color: #24232B;
-  border: none;
-  color: #DFDEE1;
   margin-bottom: 1rem;
   padding: 0.5rem;
+}
+.header .inputContainer input {
+  font-size: 1.1rem;
+  border: none;
+  background-color: #24232B;
+  color: #DFDEE1;
+}
+.header .inputContainer img {
+  width: 1.2rem;
+}
+.header .inputContainer img:hover {
+  cursor: pointer;
 }
 
 .containerBody .charactInfo {
@@ -79,6 +84,9 @@ html {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+}
+.containerBody .charactInfo .textLg {
+  color: #A4FFAF;
 }
 
 .generalText {
@@ -111,6 +119,7 @@ html {
 }
 
 .strengthDiv {
+  margin-top: 0.4rem;
   background-color: #18181F;
   padding: 0.5rem;
   box-sizing: border-box;
@@ -146,6 +155,22 @@ html {
 
 .hard {
   background-color: green;
+}
+
+.btnLg {
+  margin-top: 0.5rem;
+  background-color: #A4FFAF;
+  padding: 0.5rem;
+  font-size: 0.6rem;
+  border: none;
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.btnLg .arrow {
+  max-width: 0.5rem;
+  margin-left: 0.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
