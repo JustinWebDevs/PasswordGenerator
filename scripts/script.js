@@ -113,7 +113,7 @@ const valueStrength = (charQty) => {
     if (strength < 20) {
         
     }
-
+}
 
 upper.addEventListener('click', changeMainText);
 lower.addEventListener('click', changeMainText);
@@ -132,4 +132,3 @@ charLenght.addEventListener('input', () => {
     valueRange.innerText = charLenght.value;
     valueStrength(charLenght.value);
 });
-
