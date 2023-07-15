@@ -230,13 +230,14 @@
     padding: 10px;
     margin: 0 auto;
     position: fixed;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: 0.5s;
   }
   
   .alert.show {
     opacity: 1;
+    top: 50%;
   }
