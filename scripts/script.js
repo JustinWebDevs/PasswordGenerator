@@ -7,6 +7,7 @@ let charLenght = document.getElementById('charLenght');
 let generate = document.getElementById('generate');
 let valueRange = document.getElementById('valueRange');
 let copy = document.getElementById('copy');
+let alert = document.getElementById('alert');
 
 const generatePassword = () => {
     let upperCharaters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -164,8 +165,18 @@ function strengRange(){
 
 copy.addEventListener('click', ()=>{
     navigator.clipboard.writeText(password.value).then(function() {
-        alert("Copied to clipboard successfully!");
+            alert.classList.remove('hide');
+            alert.classList.add('show');
+            setTimeout(()=>{
+                alert.classList.remove('show');
+                alert.classList.add('hide');
+            }, 2000);
       }, function() {
         alert("Unable to write to clipboard. :-(");
       });
 });
+
+function closeAlert(){
+    alert.classList.remove('show');
+    alert.classList.add('hide');
+}
