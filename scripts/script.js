@@ -8,6 +8,7 @@ let generate = document.getElementById('generate');
 let valueRange = document.getElementById('valueRange');
 let copy = document.getElementById('copy');
 let alert = document.getElementById('alert');
+let alertError = document.getElementById('alertError');
 
 const generatePassword = () => {
     let upperCharaters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -172,11 +173,21 @@ copy.addEventListener('click', ()=>{
                 alert.classList.add('hide');
             }, 2000);
       }, function() {
-        alert("Unable to write to clipboard. :-(");
+        alertError.classList.remove('hide');
+        alertError.classList.add('show');
+        setTimeout(()=>{
+            alertError.classList.remove('show');
+            alertError.classList.add('hide');
+        }, 2000);
       });
 });
 
 function closeAlert(){
+    alert.classList.remove('show');
+    alert.classList.add('hide');
+}
+
+function closeAlertError(){
     alert.classList.remove('show');
     alert.classList.add('hide');
 }
