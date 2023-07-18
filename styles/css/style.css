@@ -179,7 +179,7 @@ html {
   padding: 10px;
   margin: 0 auto;
   position: fixed;
-  top: 80%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
