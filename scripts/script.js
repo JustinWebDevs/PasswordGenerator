@@ -7,8 +7,9 @@ let charLenght = document.getElementById('charLenght');
 let generate = document.getElementById('generate');
 let valueRange = document.getElementById('valueRange');
 let copy = document.getElementById('copy');
-let alert = document.getElementById('alert');
+let alertInfo = document.getElementById('alertInfo');
 let alertError = document.getElementById('alertError');
+let alertChar = document.getElementById('alertChar')
 
 const generatePassword = () => {
     let upperCharaters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -153,7 +154,7 @@ generate.addEventListener('click', ()=>{
     if (upper.checked || lower.checked || numbers.checked || symbols.checked){
         generatePassword();
     }else{
-        alert('debe seleccionar un tipo de caracter');
+        alertCharacters();
     }
 });
 
@@ -166,11 +167,11 @@ function strengRange(){
 
 copy.addEventListener('click', ()=>{
     navigator.clipboard.writeText(password.value).then(function() {
-            alert.classList.remove('hide');
-            alert.classList.add('show');
+            alertInfo.classList.remove('hide');
+            alertInfo.classList.add('show');
             setTimeout(()=>{
-                alert.classList.remove('show');
-                alert.classList.add('hide');
+                alertInfo.classList.remove('show');
+                alertInfo.classList.add('hide');
             }, 2000);
       }, function() {
         alertError.classList.remove('hide');
@@ -183,11 +184,26 @@ copy.addEventListener('click', ()=>{
 });
 
 function closeAlert(){
-    alert.classList.remove('show');
-    alert.classList.add('hide');
+    alertInfo.classList.remove('show');
+    alertInfo.classList.add('hide');
+}
+
+function alertCharacters(){
+    alertChar.classList.remove('hide');
+    alertChar.classList.add('show');
+    
+    setTimeout(()=>{
+        alertChar.classList.remove('show');
+        alertChar.classList.add('hide');
+    }, 2000);
 }
 
 function closeAlertError(){
-    alert.classList.remove('show');
-    alert.classList.add('hide');
+    alertError.classList.remove('show');
+    alertError.classList.add('hide');
+}
+
+function closeAlertChar(){
+    alertChar.classList.remove('show');
+    alertChar.classList.add('hide');
 }
