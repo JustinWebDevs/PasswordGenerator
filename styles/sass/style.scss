@@ -235,6 +235,15 @@
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: 0.5s;
+
+    display: grid;
+    grid-template-columns: repeat(5, 2.2rem);
+    grid-template-rows: repeat(3, 2.2rem);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    .alertHeader { grid-area: 1 / 5 / 2 / 6; }
+    .alertBody { grid-area: 2 / 2 / 3 / 5; }
   }
   
   .alert.show {
